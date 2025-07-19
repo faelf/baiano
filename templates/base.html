@@ -1,37 +1,51 @@
+{% load static %}
+
 <!doctype html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
+
+  <!-- Same as header background color -->
+  <meta name="theme-color" content="#004AAD">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% block page-title %}
-    
+
   {% endblock page-title %}
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="/">Baiano</a>
+
+      <a class="navbar-brand" href="/">BAIANO RESTAURANT</a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/menu">Menu</a>
+            <a class="nav-link {% if request.path == '/menu/' %}active{% endif %}" href="/menu">Menu</a>
           </li>
         </ul>
+
         <ul class="navbar-nav ms-md-auto">
           <li class="nav-item">
             <a class="nav-link" href="#">My Reservations</a>
@@ -43,9 +57,10 @@
             <a class="nav-link" href="#">Log out</a>
           </li>
           <li class="d-flex">
-            <a class="btn btn-primary" href="#" role="button">Register</a>
+            <a class="btn btn-secondary" href="#" role="button">Register</a>
           </li>
         </ul>
+
       </div>
     </div>
   </nav>
@@ -56,14 +71,78 @@
 
   <footer class="mt-auto">
     <div class="container">
-      <h3>This is the footer</h3>
+      <div class="row">
+
+        <div class="col-12 col-md-4">
+          <ul class="social-buttons">
+            <li>
+              <a href="#" class="btn btn-facebook" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn btn-youtube" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn btn-instagram" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="contact-me">
+            <ul>
+              <li>
+                Get in touch
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                020 0000 0000
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                email@example.com
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="address">
+            <ul>
+              <li>
+                Where we are
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> London, UK
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-12 text-center">
+          <p>Rafael Ferreira</p>
+          <p>2025</p>
+        </div>
+
+      </div>
     </div>
   </footer>
-  
+
   <!-- Bootstrap 5 -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
+
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/8fd7781574.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
