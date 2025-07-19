@@ -27,6 +27,15 @@ p {
   margin-bottom: 0.2rem;
 }
 
+a {
+  text-decoration: none;
+}
+
+.center-grid {
+  display: grid;
+  place-items: center;
+}
+
 /* Buttons Styles */
 
 .btn {
@@ -35,6 +44,14 @@ p {
   justify-content: center;     /* Horizontal center */
   line-height: 1.2;
   padding: 0.5rem 1.2rem;
+}
+
+.btn-primary {
+  background-color: var(--colour-primary);
+  border-color: var(--colour-primary);
+  font-family: var(--font-body);
+  border-radius: 70px;
+  font-weight: bold;
 }
 
 .btn-secondary {

@@ -1,5 +1,12 @@
 {% load static %}
 
+{% url 'restaurant-home' as home_url %}
+{% url 'menu' as menu_url %}
+{% url 'reservations' as reservations_url %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 <!doctype html>
 <html lang="en">
 
@@ -25,7 +32,7 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg mb-3">
     <div class="container">
 
       <a class="navbar-brand" href="/">BAIANO RESTAURANT</a>
@@ -39,26 +46,31 @@
 
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a>
+            <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if request.path == '/menu/' %}active{% endif %}" href="/menu">Menu</a>
+            <a class="nav-link {% if request.path == menu_url %}active{% endif %}" href="{{ menu_url }}">Menu</a>
           </li>
         </ul>
 
         <ul class="navbar-nav ms-md-auto">
-          <li class="nav-item">
-            <a class="nav-link {% if request.path == '/reservations/' %}active{% endif %}" href="/reservations">My Reservations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Log in</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Log out</a>
-          </li>
-          <li class="d-flex">
-            <a class="btn btn-secondary" href="#" role="button">Register</a>
-          </li>
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == reservations_url %}active{% endif %}" href="{{ reservations_url }}">Reservations</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{% url 'account_logout' %}">Log out</a>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{% url 'account_login' %}">Log in</a>
+            </li>
+            
+            <li class="d-flex">
+              <a class="btn btn-secondary" href="{% url 'account_signup' %}" role="button">Register</a>
+            </li>
+          {% endif %}
         </ul>
 
       </div>
