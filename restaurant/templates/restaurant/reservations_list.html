@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h2>Reservations</h2>
+
+  <div class="card mb-3">
+    <div class="card-body">
+      <h4>{{ request.user.get_full_name }}</h4>
+      <p>Here you will see a list of your reservations, you can edit, delete, or create a new one.</p>
+    </div>
+  </div>
+
+
+  {% for reservation in reservations %}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Reservation details</h5>
+      <form>
+        <fieldset disabled>
+          <div class="row">
+
+            <div class="col-12 col-md-6 col-lg-3 mb-2">
+              <label for="r-name" class="form-label">Name</label>
+              <input type="text" id="r-name" class="form-control"
+                placeholder="{{ reservation.first_name }} {{ reservation.last_name }}">
+              <small class="form-text text-muted">Nome on the reservation</small>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 mb-2">
+              <label for="r-date" class="form-label">Reservation Date</label>
+              <input type="date" id="r-date" class="form-control" value="{{ reservation.date|date:'Y-m-d' }}">
+              <small class="form-text text-muted">Format: DD/MM/YYYY</small>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 mb-2">
+              <label for="r-time" class="form-label">Reservation Time</label>
+              <input type="time" id="r-time" class="form-control" value="{{ reservation.time|time:'H:i' }}">
+              <small class="form-text text-muted">Format: 24-hour (HH:MM)</small>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 mb-2">
+              <label for="r-guests" class="form-label">Number of Guests</label>
+              <input type="number" id="r-guests" class="form-control" placeholder="Enter number of guests" min="1"
+                value="{{ reservation.guests }}">
+            </div>
+
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn">Edit</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+{% endblock %}

@@ -48,7 +48,7 @@
 
         <ul class="navbar-nav ms-md-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">My Reservations</a>
+            <a class="nav-link {% if request.path == '/reservations/' %}active{% endif %}" href="/reservations">My Reservations</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Log in</a>

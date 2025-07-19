@@ -23,11 +23,6 @@ body {
   font-family: var(--font-body);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  text-align: center;
-  font-weight: 900;
-}
-
 p {
   margin-bottom: 0.2rem;
 }
