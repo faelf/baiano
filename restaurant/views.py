@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import generic
 from .models import Reservations
 
@@ -10,7 +11,14 @@ def home(request):
 def menu(request):
   return render(request, 'restaurant/menu.html')
 
-class ReservationsList(generic.ListView):
-    queryset = Reservations.objects.all()
+class ReservationsList(LoginRequiredMixin, generic.ListView):
+    """
+    This will only display the reservations of the logged in user
+    """
+    
     template_name = 'reservations/reservations_list.html'
     context_object_name = 'reservations'
+
+    def get_queryset(self):
+        # Filter reservations by logged-in user
+        return Reservations.objects.filter(user=self.request.user).order_by('-date', '-time')

@@ -4,10 +4,26 @@
 <div class="container">
   <h2>Reservations</h2>
 
-  <div class="card mb-3">
-    <div class="card-body">
-      <h4>{{ request.user.get_full_name }}</h4>
-      <p>Here you will see a list of your reservations, you can edit, delete, or create a new one.</p>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h4>{{ request.user.get_full_name }}</h4>
+          <p>Here you will see a list of your reservations, you can edit, delete, or create a new one.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h4>New Reservation</h4>
+          <p>Click on the button bellow to make a reservation</p>
+          <div class="d-flex justify-content-end">
+            <a class="btn btn-primary" href="#" role="button">Reserve</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
