@@ -18,7 +18,7 @@ class CustomSignupForm(SignupForm):
 class ReservationForm(forms.ModelForm):
     class Meta:
         model = Reservations
-        fields = ['first_name', 'last_name', 'date', 'time', 'guests']  # add any other fields you want
+        fields = ['first_name', 'last_name', 'date', 'time', 'guests']
         widgets = {
             'date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
             'time': forms.TimeInput(attrs={'type': 'time', 'class': 'form-control'}),

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <div class="container">
@@ -32,44 +33,59 @@
   <div class="card mb-3">
     <div class="card-body">
       <h5 class="card-title">Reservation details</h5>
-      <form>
-        <fieldset disabled>
-          <div class="row">
+      <!-- action is for the save button to send the updated reservation -->
+      <!-- data-delete-url for JS to redirect to the delete page -->
+      <form method="post"
+            action="{% url 'reservation_update' reservation.pk %}"
+            data-delete-url="{% url 'reservation_delete' reservation.pk %}">
+        {% csrf_token %}
+        <div class="row">
 
-            <div class="col-12 col-md-6 col-lg-3 mb-2">
-              <label for="r-name" class="form-label">Name</label>
-              <input type="text" id="r-name" class="form-control"
-                placeholder="{{ reservation.first_name }} {{ reservation.last_name }}">
-              <small class="form-text text-muted">Nome on the reservation</small>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-3 mb-2">
-              <label for="r-date" class="form-label">Reservation Date</label>
-              <input type="date" id="r-date" class="form-control" value="{{ reservation.date|date:'Y-m-d' }}">
-              <small class="form-text text-muted">Format: DD/MM/YYYY</small>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-3 mb-2">
-              <label for="r-time" class="form-label">Reservation Time</label>
-              <input type="time" id="r-time" class="form-control" value="{{ reservation.time|time:'H:i' }}">
-              <small class="form-text text-muted">Format: 24-hour (HH:MM)</small>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-3 mb-2">
-              <label for="r-guests" class="form-label">Number of Guests</label>
-              <input type="number" id="r-guests" class="form-control" placeholder="Enter number of guests" min="1"
-                value="{{ reservation.guests }}">
-            </div>
-
+          <div class="col-12 col-md-6 col-lg-3 mb-2">
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" name="first_name" class="form-control" value="{{ reservation.first_name }}" readonly>
           </div>
-          <div class="d-flex justify-content-end">
-            <button type="button" class="btn">Edit</button>
+
+          <div class="col-12 col-md-6 col-lg-3 mb-2">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" name="last_name" class="form-control" value="{{ reservation.last_name }}" readonly>
           </div>
-        </fieldset>
+
+          <div class="col-12 col-md-6 col-lg-2 mb-2">
+            <label for="date" class="form-label">Reservation Date</label>
+            <input type="date" name="date" class="form-control" value="{{ reservation.date|date:'Y-m-d' }}" readonly>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-2 mb-2">
+            <label for="time" class="form-label">Reservation Time</label>
+            <input type="time" name="time" class="form-control" value="{{ reservation.time|time:'H:i' }}" readonly>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-2 mb-2">
+            <label for="guests" class="form-label">Number of Guests</label>
+            <input type="number" name="guests" class="form-control" value="{{ reservation.guests }}" min="1" readonly>
+          </div>
+
+        </div>
+        <div class="d-flex justify-content-end">
+          <!-- Set readonly to false in JS -->
+          <button type="button" class="btn btn-primary side-margins me-2 edit-btn">Edit</button>
+          <!-- Submit type to send a POST request
+               and loads reservation page -->
+          <button type="submit" class="btn btn-success side-margins save-btn d-none">Save</button>
+          <!-- Set readonly to true in JS -->
+          <button type="button" class="btn btn-secondary side-margins cancel-btn d-none">Cancel</button>
+          <!-- Redirect to reservation_delete in JS -->
+          <button type="button" class="btn btn-danger side-margins delete-btn">Delete</button>
+        </div>
       </form>
     </div>
   </div>
   {% endfor %}
 
 </div>
+
+<!-- Custom JavaScript -->
+<script src="{% static 'js/main.js' %}"></script>
+
 {% endblock %}
