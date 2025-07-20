@@ -136,6 +136,12 @@ nav {
   color: var(--colour-dark)
 }
 
+/* Menu Styles */
+
+.menu-item {
+  width: 200px;
+}
+
 /* Footer Styles */
 footer {
   --color-facebook: hsl(214, 90%, 54%);   /* #1877f2 */
