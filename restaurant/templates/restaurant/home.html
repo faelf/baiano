@@ -1,14 +1,104 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block page-title %}
-  <title>Baiano | Home</title>
+<title>Baiano | Home</title>
 {% endblock page-title %}
 
 {% block content %}
 
-  <div class="container">
-    <h1>Home</h1>
-    <p>This will be the page content.</p>
+<!-- Hero Section -->
+
+<div class="hero">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold mb-3">Welcome to Baiano Restaurant</h1>
+    <p class="lead mb-4">Experience the authentic flavours of Bahia, right here in London.</p>
+    <a href="{% url 'menu' %}" class="btn btn-primary btn-lg p-3 me-3">Explore Menu</a>
+    <a href="{% url 'reservations' %}" class="btn btn-secondary p-3 btn-lg">Book a Table</a>
   </div>
+</div>
+
+<!-- Feature Dishes -->
+
+<div class="container my-5">
+  <div class="text-center mb-5">
+    <p class="display-3">Our Popular Choices</p>
+  </div>
+
+  <div class="row text-center justify-content-around">
+    <div class="col-12 col-md-4 feat-dishes">
+      <img src="{% static 'images/pastel.png' %}" alt="Pastel">
+      <h5 class="fw-bold">Pastel</h5>
+      <p class="text-muted small">Crispy pastry filled with savoury delights, a Brazilian favourite.</p>
+    </div>
+
+    <div class="col-12 col-md-4 feat-dishes">
+      <img src="{% static 'images/acaraje.jpg' %}" alt="Acaraje">
+      <h5 class="fw-bold">Moqueca Baiana</h5>
+      <p class="text-muted small">Deep-fried black-eyed pea fritters, crispy outside, soft inside.</p>
+    </div>
+
+    <div class="col-12 col-md-4 feat-dishes">
+      <img src="{% static 'images/caruru.jpg' %}" alt="Caruru">
+      <h5 class="fw-bold">Caruru</h5>
+      <p class="text-muted small">Okra stew with shrimp, peanuts, and palm oil, rich Bahian flavours.</p>
+    </div>
+  </div>
+</div>
+
+<div class="customer-reviews">
+  <div class="container my-5">
+    <div class="text-center mb-5">
+      <p class="display-3">Customer Reviews</p>
+    </div>
+
+    <div class="row text-center justify-content-around">
+      <div class="col-12 col-md-4">
+        <figure>
+          <blockquote class="blockquote">
+            <p>“The flavours took me straight back to Bahia! The moqueca was divine, fresh, rich, and perfectly spiced.I will definitely be back.”</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">Ana M.</figcaption>
+        </figure>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <figure>
+          <blockquote class="blockquote">
+            <p>“Amazing food and friendly service. The acarajé was crispy and authentic, just like home. Highly recommend!”</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">Lucas T.</figcaption>
+        </figure>
+      </div>
+
+      <div class="col-12 col-md-4">
+        </figure>
+          <blockquote class="blockquote">
+            <p>“A hidden gem in London! The atmosphere is cosy and the staff made us feel like family. Can not wait to try the caruru next time.”</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">Sofia R.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about">
+  <div class="container my-5">
+    <div class="text-center mb-5">
+      <p class="display-3">About Us</p>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4 text-center">
+        <img class="img-fluid" src="{% static 'images/restaurant-photo.png' %}" alt="A photo of the restaurant">
+      </div>
+      <div class="col-12 col-md-8 d-flex align-items-center">
+        <p>At Baiano Restaurant, we bring the vibrant flavours and rich culture of Bahia straight to the heart of London. Our passion is serving authentic Bahian dishes made with love and tradition, using fresh ingredients and time-honoured recipes passed down through generations.<br>
+        Whether you are a Bahian far from home or simply curious to explore Brazil&rsquo;s unique cuisine, Baiano offers a welcoming space where every meal feels like a celebration. Join us to experience the warmth, spice, and soul of Bahia in every bite.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 {% endblock content %}
