@@ -205,11 +205,3 @@ footer {
 .btn-instagram:hover {
   background-color: hsl(180, 100%, 40%);
 }
-
-.address ul, 
-.contact-me ul,
-.social-buttons {
-  list-style: none;
-  padding-left: 0; /* also remove default indent */
-  margin: 10px 0;
-}
