@@ -9,7 +9,7 @@
 
 <div class="container">
   <div class="menu-description my-4">
-    <h2>Welcome to Baiano&rsquo;s Menu!</h2>
+    <p class="display-3">Welcome to Baiano&rsquo;s Menu!</p>
     <p>Discover a delicious selection of authentic Brazilian flavors crafted with fresh ingredients and passion. Whether
       you are craving traditional classics or modern twists, our dishes are designed to delight your palate and
       satisfy
@@ -155,10 +155,10 @@
     <h4 class="mb-3">Are you ready to book a table with us?</h4>
     <p>
       {% if user.is_authenticated %}
-        <a class="btn btn-primary" href="{{ reservations_url }}">Reservations</a>
+        <a class="btn btn-primary p-3 btn-lg" href="{{ reservations_url }}">Make a Booking</a>
       {% else %}
-        <a href="{% url 'account_login' %}" class="btn btn-primary me-2">Log in</a>
-        <a href="{% url 'account_signup' %}" class="btn btn-secondary">Register</a>
+        <a href="{% url 'account_login' %}" class="btn btn-primary  p-3 btn-lgme-2">Log in</a>
+        <a href="{% url 'account_signup' %}" class="btn btn-secondary p-3 btn-lg">Register</a>
       {% endif %}
     </p>
   </div>
