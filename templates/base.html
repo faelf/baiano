@@ -32,6 +32,7 @@
 
 <body class="d-flex flex-column min-vh-100">
 
+  <!-- Navigation Menu -->
   <nav class="navbar navbar-expand-lg mb-3">
     <div class="container">
 
@@ -55,21 +56,24 @@
 
         <ul class="navbar-nav ms-md-auto">
           {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == reservations_url %}active{% endif %}" href="{{ reservations_url }}">Reservations</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == reservations_url %}active{% endif %}"
+              href="{{ reservations_url }}">Reservations</a>
+          </li>
 
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{% url 'account_logout' %}">Log out</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
+              href="{% url 'account_logout' %}">Log out</a>
+          </li>
           {% else %}
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{% url 'account_login' %}">Log in</a>
-            </li>
-            
-            <li class="d-flex">
-              <a class="btn btn-secondary" href="{% url 'account_signup' %}" role="button">Register</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{% url 'account_login' %}">Log
+              in</a>
+          </li>
+
+          <li class="d-flex">
+            <a class="btn btn-secondary" href="{% url 'account_signup' %}" role="button">Register</a>
+          </li>
           {% endif %}
         </ul>
 
@@ -85,22 +89,23 @@
     <div class="container">
       <div class="row">
 
+        <!-- Social Links -->
         <div class="col-12 col-md-4">
-          <ul class="social-buttons">
+          <ul class="list-unstyled mb-3 social-buttons">
             <li>
-              <a href="#" class="btn btn-facebook" target="_blank" aria-label="Facebook">
+              <a href="facebook.com/" class="btn btn-facebook" target="_blank" aria-label="Facebook">
                 <i class="fab fa-facebook-f"></i>
                 <span>Facebook</span>
               </a>
             </li>
             <li>
-              <a href="#" class="btn btn-youtube" target="_blank" aria-label="YouTube">
+              <a href="youtube.com/" class="btn btn-youtube" target="_blank" aria-label="YouTube">
                 <i class="fab fa-youtube"></i>
                 <span>YouTube</span>
               </a>
             </li>
             <li>
-              <a href="#" class="btn btn-instagram" target="_blank" aria-label="Instagram">
+              <a href="instagram.com/" class="btn btn-instagram" target="_blank" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
                 <span>Instagram</span>
               </a>
@@ -110,38 +115,49 @@
 
         <div class="col-12 col-md-4">
           <div class="contact-me">
-            <ul>
-              <li>
-                Get in touch
+            <ul class="list-unstyled mb-3">
+              <li class="fw-bold fs-5 mb-2">Get in touch</li>
+              <li class="d-flex align-items-center mb-1">
+                <i class="fas fa-phone me-2"></i>
+                +44 1234 567890
               </li>
-              <li>
-                <i class="fas fa-phone"></i>
-                020 0000 0000
+              <li class="d-flex align-items-center mb-3">
+                <i class="fas fa-envelope me-2"></i>
+                contact@baianorestaurant.uk
               </li>
-              <li>
-                <i class="fas fa-envelope"></i>
-                email@example.com
+
+              <li class="fw-bold fs-5 mb-2">Where we are</li>
+              <li class="d-flex align-items-center">
+                <i class="fas fa-map-marker-alt me-2"></i>
+                123 Bahia Street, London, UK, W1D 4QR
               </li>
             </ul>
           </div>
         </div>
 
+        <!-- Opening Hours -->
         <div class="col-12 col-md-4">
           <div class="address">
-            <ul>
-              <li>
-                Where we are
+            <ul class="list-unstyled mb-3">
+              <li class="fw-bold fs-5 mb-2">
+                Opening Hours
               </li>
               <li>
-                <i class="fas fa-map-marker-alt"></i> London, UK
+                <i class="fas fa-calendar-day me-2"></i>
+                Tuesday to Sunday
+              </li>
+              <li>
+                <i class="fas fa-hourglass-half me-2"></i>
+                15:00 &ndash; 23:00
               </li>
             </ul>
           </div>
         </div>
 
-        <div class="col-12 text-center">
+        <!-- Footer Credit -->
+        <div class="col-12 text-center mt-4 mb-3 small">
           <p>Rafael Ferreira</p>
-          <p>2025</p>
+          <p>&copy; 2025</p>
         </div>
 
       </div>
