@@ -33,7 +33,7 @@
 <body class="d-flex flex-column min-vh-100">
 
   <!-- Navigation Menu -->
-  <nav class="navbar navbar-expand-lg mb-3">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
 
       <a class="navbar-brand" href="/">BAIANO RESTAURANT</a>
@@ -58,7 +58,7 @@
           {% if user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link {% if request.path == reservations_url %}active{% endif %}"
-              href="{{ reservations_url }}">Reservations</a>
+              href="{{ reservations_url }}">My Bookings</a>
           </li>
 
           <li class="nav-item">

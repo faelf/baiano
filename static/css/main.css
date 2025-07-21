@@ -43,12 +43,23 @@ a {
   margin: 0 10px;
 }
 
+.display-3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.rounded-img {
+  max-height: 250px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
 /* Buttons Styles */
 
 .btn {
-  display: inline-flex;        /* Use flexbox */
-  align-items: center;         /* Vertical center */
-  justify-content: center;     /* Horizontal center */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1.2;
   padding: 0.5rem 1.2rem;
 }
@@ -140,6 +151,66 @@ nav {
 
 .menu-item {
   width: 200px;
+}
+
+/* Hero */
+
+.hero {
+  min-height: 60vh;
+  background: url('/static/images/hero.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  z-index: 0;
+}
+
+.hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Featured Dishes */
+
+.feat-dishes {
+  max-width: 200px;
+}
+
+.feat-dishes img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  margin: 15px auto;
+}
+
+/* Customer Reviews */
+.customer-reviews {
+  background-color: hsl(37, 100%, 93%);   /* #fff4e6 */
+}
+
+/* Log In Page */
+
+.login-page {
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Sign Up Page */
+
+.signup-page {
+  max-width: 600px;
+  margin: auto;
 }
 
 /* Footer Styles */

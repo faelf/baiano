@@ -9,13 +9,18 @@
 {% endblock page-title %}
 
 {% block content %}
-  <div class="center-grid">
-    <div>
-      <h3 class="mb-3">Sign In</h3>
+  <div class="container mb-5">
+    <div class="login-page">
+      
+      <div class="mb-5">
+        <p class="display-3">Sign In</p>
+      </div>
+
       <div class="mb-3">
         <p>Welcome to Baiano Restaurant!</p>
         <p>We're excited to have you here. If you already have an account, please log in below.</p>
       </div>
+
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
 
