@@ -2,25 +2,27 @@
 
 ## Table of Contents
 
-- [Overview](#overview-📖)
-- [User Experience (UX)](#user-experience-ux-👥)
-  - [Strategy (Site Goals)](#strategy-site-goals-🎯)
-  - [Scope (User Stories)](#scope-user-stories-📋)
-  - [Structure (Design Choices)](#structure-design-choices-🏗️)
-  - [Skeleton (Wireframes)](#skeleton-wireframes-🖼️)
-  - [Surface (Visual Design)](#surface-visual-design-🎨)
-- [Technologies Used](#technologies-used-🛠️)
-  - [Languages](#languages-💻)
-  - [Libraries & Frameworks](#libraries--frameworks-⚙️)
-  - [Tools](#tools-🧰)
-- [Deployment](#deployment-🚀)
-- [Existing Features](#existing-features-✅)
-- [Future Features](#future-features-🔮)
-- [Testing](#testing-🧪)
-- [Bugs](#bugs-🐞)
-- [Credits](#credits-🙏)
+- [Overview](#overview)
+- [User Experience (UX)](#user-experience-ux)
+  - [Strategy (Site Goals)](#strategy-site-goals)
+  - [Scope (User Stories)](#scope-user-stories)
+  - [Structure (Design Choices)](#structure-design-choices)
+  - [Skeleton (Wireframes)](#skeleton-wireframes)
+  - [Surface (Visual Design)](#surface-visual-design)
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Libraries & Frameworks](#libraries--frameworks)
+  - [Tools](#tools)
+- [Deployment](#deployment)
+- [Existing Features](#existing-features)
+- [Future Features](#future-features)
+- [Testing](#testing)
+- [Bugs](#bugs)
+- [Credits](#credits)
 
-## Overview 📖
+---
+
+## Overview
 
 The Baiano Restaurant is a fictional Brazilian restaurant, and the webpage was developed as a full-stack project for Code Institute Milestone 3. The webpage has a homepage introducing the restaurant, a menu page with its main dishes, and a login system that allows registered users to create, edit, and delete reservations.
 
@@ -28,13 +30,15 @@ Designed with a mobile-first approach, the website is fully responsive to ensure
 
 [Back to the top](#table-of-contents)
 
-## User Experience (UX) 👥
+## User Experience (UX)
 
 Baiano Restaurant’s users are primarily people from Bahia, living abroad, and looking for Bahian food, often browsing on mobile while looking for a place to eat.
 
 Customers want to quickly have a look at the menu with images, check opening hours, and book a table. Customers can manage existing reservations, while staff/admin users can review and update bookings. The experience should feel warm, vibrant, and reminiscent of home, and accessible for all users.
 
-## Strategy (Site Goals) 🎯
+[Back to the top](#table-of-contents)
+
+## Strategy (Site Goals)
 
 The website aims to promote Baiano Restaurant by sharing authentic Bahian dishes, and creating a sense of home for people from Bahia living abroad.
 
@@ -48,7 +52,7 @@ For management, the admin area enables staff to review, edit, and organise reser
 
 [Back to the top](#table-of-contents)
 
-## Scope (User Stories) 📋
+## Scope (User Stories)
 
 The project is organised and tracked on GitHub Projects, which can be viewed [here](https://github.com/users/faelf/projects/4).
 
@@ -71,27 +75,27 @@ Below are the User Stories, with their acceptance criteria.
 
 [Back to the top](#table-of-contents)
 
-## Structure (Design Choices) 🏗️
+## Structure (Design Choices)
 
-### Colour Palette 🎨
+### Colour Palette
 
-### Typography ✍️
-
-[Back to the top](#table-of-contents)
-
-## Skeleton (Wireframes) 🖼️
+### Typography
 
 [Back to the top](#table-of-contents)
 
-## Surface (Visual Design) 🎨
+## Skeleton (Wireframes)
 
 [Back to the top](#table-of-contents)
 
-## Technologies Used 🛠️
+## Surface (Visual Design)
 
-### Languages 💻
+[Back to the top](#table-of-contents)
 
-### Libraries & Frameworks ⚙️
+## Technologies Used
+
+### Languages
+
+### Libraries & Frameworks
 
 - [Django](https://docs.djangoproject.com/en/5.2/topics/install/)
 - [gunicorn](https://gunicorn.org/)
@@ -99,11 +103,11 @@ Below are the User Stories, with their acceptance criteria.
 - [dj-database-url](https://pypi.org/project/dj-database-url/)
 - [whitenoise](https://whitenoise.readthedocs.io/en/stable/index.html)
 
-### Tools 🧰
+### Tools
 
 [Back to the top](#table-of-contents)
 
-## Deployment 🚀
+## Deployment
 
 A step-by-step guide to deploying your Django project to Heroku on Windows.
 
@@ -194,23 +198,23 @@ WSGI_APPLICATION = '(Project name).wsgi.application'
 
 [Back to the top](#table-of-contents)
 
-## Existing Features ✅
+## Existing Features
 
 [Back to the top](#table-of-contents)
 
-## Future Features 🔮
+## Future Features
 
 [Back to the top](#table-of-contents)
 
-## Testing 🧪
+## Testing
 
 [Back to the top](#table-of-contents)
 
-## Bugs 🐞
+## Bugs
 
 [Back to the top](#table-of-contents)
 
-## Credits 🙏
+## Credits
 
 ### Code
 
