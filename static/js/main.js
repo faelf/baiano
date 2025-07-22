@@ -39,15 +39,13 @@ document.addEventListener("DOMContentLoaded", function() {
     // If a delete button exists, it will add the eventlistener
     if (deleteBtn) {
       deleteBtn.addEventListener("click", function() {
-        if (confirm("Are you sure you want to delete this reservation?")) {
-          // Get the URL to delete the post
-          const deleteUrl = card.querySelector("form").getAttribute("data-delete-url");
-          if (deleteUrl) {
-            // Redirect to the delete URL
-            window.location.href = deleteUrl;
-          } else {
-            alert("Delete URL not configured.");
-          }
+        // Get the URL to delete the post
+        const deleteUrl = card.querySelector("form").getAttribute("data-delete-url");
+        if (deleteUrl) {
+          // Redirect to the delete URL
+          window.location.href = deleteUrl;
+        } else {
+          alert("Delete URL not configured.");
         }
       });
     }

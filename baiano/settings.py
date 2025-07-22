@@ -58,7 +58,7 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL = '/reservations/'
+LOGIN_REDIRECT_URL = '/bookings/'
 LOGOUT_REDIRECT_URL = '/'
 
 ACCOUNT_FORMS = {

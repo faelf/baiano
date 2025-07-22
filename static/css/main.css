@@ -213,6 +213,13 @@ nav {
   margin: auto;
 }
 
+/* Delete Booking Page */
+
+.delete-booking-page {
+  max-width: 600px;
+  margin: auto;
+}
+
 /* Footer Styles */
 footer {
   --color-facebook: hsl(214, 90%, 54%);   /* #1877f2 */

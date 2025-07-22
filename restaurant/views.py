@@ -17,7 +17,7 @@ class ReservationsList(LoginRequiredMixin, generic.ListView):
     View to display the reservations to logged in user
     """
 
-    template_name = 'reservations/reservations_list.html'
+    template_name = 'restaurant/reservations_list.html'
     context_object_name = 'reservations'
 
     def get_queryset(self):
