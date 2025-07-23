@@ -77,9 +77,19 @@ Below are the User Stories, with their acceptance criteria.
 
 ## Structure (Design Choices)
 
-### Colour Palette
+### Templates
 
-### Typography
+A `base.html` template defines what is seen on every page, including the navigation bar and footer, with content injected via {% block content %}, so when the customer clicks on the `Menu` page, the `menu.html` page will extend the `base.html`. Ensuring consistancy across all pages.
+
+### Static Files
+
+Static files such as CSS, JavaScript, and images, are managed using Django’s {% static %} tag.
+
+### Responsive Design
+
+Bootstrap was chosen for its ease of creating a responsive design, and minimising the need for custom CSS media queries. Its column design makes it a simple way for the content on the page to adjust for various screen sizes, speeding up development and improving maintainability.
+
+Images are set with `max-width` to ensure that they stay responsive, and they will not over grow and feel disproportional.
 
 [Back to the top](#table-of-contents)
 
@@ -88,6 +98,22 @@ Below are the User Stories, with their acceptance criteria.
 [Back to the top](#table-of-contents)
 
 ## Surface (Visual Design)
+
+### Colour Palette
+
+The colour palette is inspired by the vibrant culture of Bahia.
+
+- **Primary Blue:**
+- **Secondary Yellow:**
+- **Green:**
+- **Red:**
+- **Light Tones:**
+
+### Typography
+
+- **Fonts:**
+  - **Headings:**
+  - **Body Text:**
 
 [Back to the top](#table-of-contents)
 
@@ -113,8 +139,8 @@ A step-by-step guide to deploying your Django project to Heroku on Windows.
 
 ### GitHub Setup
 
-1. Create a new repository on GitHub.  
-2. Clone the repository to your local machine.  
+1. Create a new repository on GitHub.
+2. Clone the repository to your local machine.
 
 ### VS Code Setup
 
@@ -122,83 +148,131 @@ A step-by-step guide to deploying your Django project to Heroku on Windows.
 2. Create a virtual environment.
 3. Install Django. `pip install django`
 4. Create the project. `django-admin startproject (Project name) .`
-5. Create an app.  `python manage.py startapp (App name)`
-6. Create a simple HttpResponse view for the homepage.  
+5. Create an app. `python manage.py startapp (App name)`
+6. Create a simple HttpResponse view for the homepage.
 7. Install Gunicorn. `pip install gunicorn`
 8. Create a `Procfile` with the command: `web: gunicorn (Project name).wsgi `
 9. In settings.py add:
+
 ```python
 WSGI_APPLICATION = '(Project name).wsgi.application'
 ```
+
 10. Specify the Python version for your development environment using a `.python-version` file.
-11. Add `heroku` and `localhost` to the `ALLOWED_HOSTS` in `settings.py`. 
- ```python
- ALLOWED_HOSTS = [
-     '.herokuapp.com',
-     'localhost',
-     '127.0.0.1',
- ]
- ``` 
+11. Add `heroku` and `localhost` to the `ALLOWED_HOSTS` in `settings.py`.
+
+```python
+ALLOWED_HOSTS = [
+    '.herokuapp.com',
+    'localhost',
+    '127.0.0.1',
+]
+```
+
 12. Create a database.
 13. Create an `env.py` file and add the `DATABASE_URL` and `SECRET_KEY`.
- ```python
- import os
 
- os.environ.setdefault(
-     "DATABASE_URL", "(Database URL)")
+```python
+import os
 
- os.environ.setdefault("SECRET_KEY", "(Create a key)")
- ```
+os.environ.setdefault(
+    "DATABASE_URL", "(Database URL)")
+
+os.environ.setdefault("SECRET_KEY", "(Create a key)")
+```
+
 14. Install `psycopg2`. `pip install psycopg2`
 15. Install `dj-database-url`. `pip install dj-database-url`
 16. Add to `settings.py`.
- ```python
- import os
 
- import dj_database_url
- if os.path.isfile('env.py'):
-     import env
+```python
+import os
 
- DATABASES = {
-     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
- }
- ```
+import dj_database_url
+if os.path.isfile('env.py'):
+    import env
+
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+```
+
 17. Run your first migration `python manage.py migrate`.
 18. Create a superuser. `python manage.py createsuperuser`
 19. Install `whitenoise` for static files. `pip install whitenoise`
 20. Edit your `settings.py` file and add WhiteNoise to the `MIDDLEWARE list`, above all other middleware apart from `Django’s SecurityMiddleware`:
- ```python
- MIDDLEWARE = [
-     # ...
-     "django.middleware.security.SecurityMiddleware",
-     "whitenoise.middleware.WhiteNoiseMiddleware",
-     # ...
- ]
- ```
-21. Add the following to the bottom of your `settings.py` file: 
- ```python
- STATIC_ROOT = BASE_DIR / "staticfiles"
- ```
+
+```python
+MIDDLEWARE = [
+    # ...
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    # ...
+]
+```
+
+21. Add the following to the bottom of your `settings.py` file:
+
+```python
+STATIC_ROOT = BASE_DIR / "staticfiles"
+```
+
 22. Run `collectstatic` to gather static files for production. `python manage.py collectstatic`
-23. Create requirements file. `pip freeze > requirements.txt` 
+23. Create requirements file. `pip freeze > requirements.txt`
 24. Commit all changes and push to GitHub.
 
 ### Heroku Deployment
 
-1. Log in to the Heroku dashboard.  
-2. Click **New** and select **Create new app**.  
-3. Enter a unique app name.  
-4. Choose the deployment region.  
-5. In **Settings**, add all necessary config vars including:  
-   - Database URL  
+1. Log in to the Heroku dashboard.
+2. Click **New** and select **Create new app**.
+3. Enter a unique app name.
+4. Choose the deployment region.
+5. In **Settings**, add all necessary config vars including:
+   - Database URL
    - Secret key
-6. Under **Deployment method**, connect the app to your GitHub repository.  
-7. Press **Deploy** 
+6. Under **Deployment method**, connect the app to your GitHub repository.
+7. Press **Deploy**
 8. Test the deployed site thoroughly to ensure all features work as expected.
 
 [Back to the top](#table-of-contents)
 
 ## Existing Features
+
+### Navigation
+
+- A responsive navigation bar is present on all pages, providing consistent access to all pages.
+- **Dynamic Links:** The navigation bar dynamically adapts based on user authentication.
+  - **Authenticated Users:** See links for `My Bookings` and `Log out`.
+  - **Unauthenticated Users:** See links for `Log in` and a `Register` button.
+
+### Homepage
+
+The homepage introduces the restaurant, and at the same time being functional.
+
+- **Hero Section:** A full-width hero image with a welcoming message and large buttons for the customer to easily book a table or register in the restaurant.
+- **Popular Choices:** This section displays featured dishes with images and brief descriptions, giving users a quick taste of the menu.
+- **Customer Reviews:** To create a connection between customers and the restaurant.
+- **About Us:** This final section tells the story of the restaurant.
+
+### Footer
+
+- **Social Media:**
+- **Contact Information:**
+- **Location:**
+- **Opening Hours:**
+
+### Login & Registration
+
+These features provide the main functionality, and enable a personalised experience for each user by allowing them to manage their bookings and access user-specific content.
+
+### Reservations
+
+The `My Bookings` page is designed as a user page, where customers can view and manage their reservations, and feel it is their space on the webpage, implementing full CRUD functionality for managing reservations.
+
+- **Read:** Users can view all their reservations in a card layout ordered by date.
+- **Create:** The `New Booking` button allows users to easily make a new reservation.
+- **Update:** Clicking `Edit` enables the `Save` and `Cancel` buttons, providing an intuitive editing experience.
+- **Delete:** The `Delete` button redirects the customer to a confirmation page, where they can delete or keep their reservation.
 
 [Back to the top](#table-of-contents)
 
