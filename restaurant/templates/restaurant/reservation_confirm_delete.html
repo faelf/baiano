@@ -5,7 +5,7 @@
 {% endblock page-title %}
 
 {% block content %}
-<div class="container my-5">
+<div class="container mb-5">
 
   <div class="delete-booking-page">
 
@@ -14,41 +14,49 @@
     </div>
 
     <p class="lead mb-4">Are you sure you want to delete this booking?</p>
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12 col-md-6 mb-2">
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" name="first_name" class="form-control" value="{{ object.first_name }}" disabled>
+          </div>
 
-    <div class="row">
-      <div class="col-12 col-md-6 mb-2">
-        <label for="first_name" class="form-label">First Name</label>
-        <input type="text" name="first_name" class="form-control" value="{{ object.first_name }}" disabled>
-      </div>
+          <div class="col-12 col-md-6 mb-2">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" name="last_name" class="form-control" value="{{ object.last_name }}" disabled>
+          </div>
 
-      <div class="col-12 col-md-6 mb-2">
-        <label for="last_name" class="form-label">Last Name</label>
-        <input type="text" name="last_name" class="form-control" value="{{ object.last_name }}" disabled>
-      </div>
+          <div class="col-12 col-md-4 mb-2">
+            <label for="date" class="form-label">Reservation Date</label>
+            <input type="date" name="date" class="form-control" value="{{ object.date|date:'d/m/Y' }}" disabled>
+          </div>
 
-      <div class="col-12 col-md-4 mb-2">
-        <label for="date" class="form-label">Reservation Date</label>
-        <input type="date" name="date" class="form-control" value="{{ object.date|date:'d/m/Y' }}" disabled>
-      </div>
+          <div class="col-12 col-md-4 mb-2">
+            <label for="time" class="form-label">Reservation Time</label>
+            <input type="time" name="time" class="form-control" value="{{ object.time|time:'H:i' }}" disabled>
+          </div>
 
-      <div class="col-12 col-md-4 mb-2">
-        <label for="time" class="form-label">Reservation Time</label>
-        <input type="time" name="time" class="form-control" value="{{ object.time|time:'H:i' }}" disabled>
-      </div>
+          <div class="col-12 col-md-4 mb-2">
+            <label for="guests" class="form-label">Number of Guests</label>
+            <input type="number" name="guests" class="form-control" value="{{ object.guests }}" min="1" disabled>
+          </div>
 
-      <div class="col-12 col-md-4 mb-2">
-        <label for="guests" class="form-label">Number of Guests</label>
-        <input type="number" name="guests" class="form-control" value="{{ object.guests }}" min="1" disabled>
+          <div class="col-12 mb-2">
+            <label for="message" class="form-label">Message</label>
+            <textarea name="message" class="form-control" rows="3" disabled>{{ object.message }}</textarea>
+          </div>
+
+        </div>
+
+        <form method="post" class="text-end my-3">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger me-3">Yes, Delete It</button>
+          <a href="{% url 'reservations' %}" class="btn btn-secondary">Cancel</a>
+        </form>
       </div>
     </div>
-
-    <form method="post" class="text-end my-3">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-danger me-3">Yes, Delete It</button>
-        <a href="{% url 'reservations' %}" class="btn btn-secondary">Cancel</a>
-    </form>
-
   </div>
-  
+
 </div>
 {% endblock %}
