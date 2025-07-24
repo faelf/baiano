@@ -77,6 +77,14 @@ Below are the User Stories, with their acceptance criteria.
 
 ## Structure (Design Choices)
 
+### Entity Relationship Diagram (ERD)
+
+The ERD below outlines the relationships between `User` and `Reservation` models.
+
+<p align="center">
+  <img src="readme/erd.png" alt="ERD Diagram" width="600"/>
+</p>
+
 ### Templates
 
 A `base.html` template defines what is seen on every page, including the navigation bar and footer, with content injected via {% block content %}, so when the customer clicks on the `Menu` page, the `menu.html` page will extend the `base.html`. Ensuring consistancy across all pages.
@@ -103,11 +111,11 @@ Images are set with `max-width` to ensure that they stay responsive, and they wi
 
 The colour palette is inspired by the vibrant culture of Bahia.
 
-- **Primary Blue:**
-- **Secondary Yellow:**
-- **Green:**
-- **Red:**
-- **Light Tones:**
+- **Primary Blue:** The main colour of the page, and the main colour from the flag of bahia, used on the navigation menu, footer, and main buttons.
+- **Secondary Yellow:** A vibrat colour, to be used together with the primary colour.
+- **Green:** Used on the `save` button.
+- **Red:** Used on the `delete` button.
+- **Light Tones:** For the background, that goes well with the primary colour.
 
 ### Typography
 
