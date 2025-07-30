@@ -119,9 +119,8 @@ The colour palette is inspired by the vibrant culture of Bahia.
 
 ### Typography
 
-- **Fonts:**
-  - **Headings:**
-  - **Body Text:**
+- **Logo:** [Amatic SC](https://fonts.google.com/specimen/Amatic+SC) - I chose Amatic SC for the logo because its handwritten style feels very Bahian.
+- **Body Text:** [Nunito](https://fonts.google.com/specimen/Nunito) - I chose Nunito because it's a modern sans-serif font. Its rounded letters give it a friendly and welcoming look.
 
 [Back to the top](#table-of-contents)
 
