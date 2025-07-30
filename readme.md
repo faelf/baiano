@@ -129,15 +129,29 @@ The colour palette is inspired by the vibrant culture of Bahia.
 
 ### Languages
 
+- HTML
+- CSS
+- JavaScript
+- Python
+
 ### Libraries & Frameworks
 
+- [Bootstrap](https://getbootstrap.com/docs/5.2/)
 - [Django](https://docs.djangoproject.com/en/5.2/topics/install/)
 - [gunicorn](https://gunicorn.org/)
 - [psycopg](https://pypi.org/project/psycopg2/)
 - [dj-database-url](https://pypi.org/project/dj-database-url/)
 - [whitenoise](https://whitenoise.readthedocs.io/en/stable/index.html)
+- [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
 
 ### Tools
+
+- [Balsamiq](https://balsamiq.com/)
+- [VS Code](https://code.visualstudio.com/)
+- [Randomkeygen](https://randomkeygen.com/)
+- [Coolors](https://coolors.co/)
+- [Realfavicon](https://realfavicongenerator.net/)
+- [Reduceimages](https://www.reduceimages.com/)
 
 [Back to the top](#table-of-contents)
 
