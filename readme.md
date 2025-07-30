@@ -277,10 +277,14 @@ The homepage introduces the restaurant, and at the same time being functional.
 
 ### Footer
 
-- **Social Media:**
-- **Contact Information:**
-- **Location:**
-- **Opening Hours:**
+- **Social Media:** Button links for the YouTube, Instagram, and Facebook.
+- **Contact Information:** Phone number and email.
+- **Location:** Address of the restaurant.
+- **Opening Hours:** Hours of operation.
+
+### Menu
+
+A menu page with pictures of the dishes to attract customers.
 
 ### Login & Registration
 
@@ -294,6 +298,14 @@ The `My Bookings` page is designed as a user page, where customers can view and 
 - **Create:** The `New Booking` button allows users to easily make a new reservation.
 - **Update:** Clicking `Edit` enables the `Save` and `Cancel` buttons, providing an intuitive editing experience.
 - **Delete:** The `Delete` button redirects the customer to a confirmation page, where they can delete or keep their reservation.
+
+### Progressive Web App (PWA)
+
+- The website is an installable Progressive Web App (PWA), offering an app-like experience for quick and easy access. This allows users to launch the restaurant page directly from their home screen on both mobile and desktop devices.
+
+<p align="center">
+  <img src="readme/features/pwa.png" alt="PWA" width="200"/>
+</p>
 
 [Back to the top](#table-of-contents)
 
