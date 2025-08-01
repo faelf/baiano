@@ -53,6 +53,10 @@ a {
   margin-bottom: 15px;
 }
 
+.alert-bg {
+  background-color: var(--colour-primary);
+}
+
 /* Buttons Styles */
 
 .btn {
