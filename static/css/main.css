@@ -1,22 +1,21 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 /* Default Values */
 :root {
-  --colour-primary: hsl(214, 100%, 34%);  /* #004AAD */
-  --colour-primary-hover: hsl(214, 100%, 64%); 
+  --colour-primary: hsl(214, 100%, 34%); /* #004AAD */
+  --colour-primary-hover: hsl(214, 100%, 64%);
   --colour-secondary: hsl(44, 100%, 48%); /* #F4B400 */
   --colour-secondary-hover: hsl(44, 100%, 68%);
-  --colour-light: 	hsl(60, 20%, 97%);    /* #F9F9F6 */
-  --colour-dark: hsl(0, 0%, 11%);         /* #1B1B1B */
-  --colour-danger: hsl(352, 70%, 50%);    /* #D7263D */
+  --colour-light: hsl(60, 20%, 97%); /* #F9F9F6 */
+  --colour-dark: hsl(0, 0%, 11%); /* #1B1B1B */
+  --colour-danger: hsl(352, 70%, 50%); /* #D7263D */
   --colour-danger-hover: hsl(352, 70%, 70%);
-  --colour-success: hsl(120, 40%, 39%);   /* #3B8B3B */
+  --colour-success: hsl(120, 40%, 39%); /* #3B8B3B */
   --colour-success-hover: hsl(120, 40%, 69%);
 
-  --font-body: 'Nunito', sans-serif;
+  --font-body: "Nunito", sans-serif;
   --font-logo: "Amatic SC", sans-serif;
-  --font-headings: 'Pacifico', cursive;
 }
 
 /* General Styles */
@@ -144,7 +143,7 @@ nav {
 }
 
 .active {
-  color: var(--colour-dark)
+  color: var(--colour-dark);
 }
 
 /* Menu Styles */
@@ -157,7 +156,7 @@ nav {
 
 .hero {
   min-height: 60vh;
-  background: url('/static/images/hero.jpg') no-repeat center center;
+  background: url("/static/images/hero.jpg") no-repeat center center;
   background-size: cover;
   position: relative;
   color: white;
@@ -168,7 +167,10 @@ nav {
 .hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: hsla(0, 0%, 0%, 0.8);
   z-index: 0;
 }
@@ -196,7 +198,7 @@ nav {
 
 /* Customer Reviews */
 .customer-reviews {
-  background-color: hsl(37, 100%, 93%);   /* #fff4e6 */
+  background-color: hsl(37, 100%, 93%); /* #fff4e6 */
 }
 
 /* Log In Page */
@@ -222,8 +224,8 @@ nav {
 
 /* Footer Styles */
 footer {
-  --color-facebook: hsl(214, 90%, 54%);   /* #1877f2 */
-  --color-youtube: hsl(0, 100%, 50%);     /* #ff0000 */
+  --color-facebook: hsl(214, 90%, 54%); /* #1877f2 */
+  --color-youtube: hsl(0, 100%, 50%); /* #ff0000 */
   --color-instagram: hsl(180, 100%, 25%); /* #008080 */
 }
 

@@ -119,9 +119,8 @@ The colour palette is inspired by the vibrant culture of Bahia.
 
 ### Typography
 
-- **Fonts:**
-  - **Headings:**
-  - **Body Text:**
+- **Logo:** [Amatic SC](https://fonts.google.com/specimen/Amatic+SC) - I chose Amatic SC for the logo because its handwritten style feels very Bahian.
+- **Body Text:** [Nunito](https://fonts.google.com/specimen/Nunito) - I chose Nunito because it's a modern sans-serif font. Its rounded letters give it a friendly and welcoming look.
 
 [Back to the top](#table-of-contents)
 
@@ -278,10 +277,14 @@ The homepage introduces the restaurant, and at the same time being functional.
 
 ### Footer
 
-- **Social Media:**
-- **Contact Information:**
-- **Location:**
-- **Opening Hours:**
+- **Social Media:** Button links for the YouTube, Instagram, and Facebook.
+- **Contact Information:** Phone number and email.
+- **Location:** Address of the restaurant.
+- **Opening Hours:** Hours of operation.
+
+### Menu
+
+A menu page with pictures of the dishes to attract customers.
 
 ### Login & Registration
 
@@ -295,6 +298,14 @@ The `My Bookings` page is designed as a user page, where customers can view and 
 - **Create:** The `New Booking` button allows users to easily make a new reservation.
 - **Update:** Clicking `Edit` enables the `Save` and `Cancel` buttons, providing an intuitive editing experience.
 - **Delete:** The `Delete` button redirects the customer to a confirmation page, where they can delete or keep their reservation.
+
+### Progressive Web App (PWA)
+
+- The website is an installable Progressive Web App (PWA), offering an app-like experience for quick and easy access. This allows users to launch the restaurant page directly from their home screen on both mobile and desktop devices.
+
+<p align="center">
+  <img src="readme/features/pwa.png" alt="PWA" width="200"/>
+</p>
 
 [Back to the top](#table-of-contents)
 
@@ -312,25 +323,36 @@ The `My Bookings` page is designed as a user page, where customers can view and 
 
 ## Credits
 
+### Text
+
+- The text on this webpage was created by [Gemini](https://gemini.google.com/).
+
 ### Code
+
+- [Traversy Media - Python Django 7 Hour Course](https://www.youtube.com/watch?v=PtQiiknWUcI&list=LL&index=11) - Great crash course on Django.
+- [Cory Schaffer - Python Django Tutorial](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) - Amazing YouTube tutorial on Django.
+- [Kevin Powell](https://www.youtube.com/@KevinPowell) - Kevin's YouTube channel is focused on CSS, with amazing examples and short tutorials.
 
 ### Reference Pages
 
-### Media
+- [Bootstrap](https://getbootstrap.com/docs/5.2/)
+- [Django](https://docs.djangoproject.com/en/5.2/topics/install/)
 
-- Menu
-  - The images were taken from the pages below
-  - Bobó de Camarão - https://www.sumerbol.com.br/uploads/images/2021/06/bobo-de-camarao-1134-1624568462.jpg
-  - Moqueca Baiana - https://foodandroad.com/wp-content/uploads/2021/06/img-brazil-moqueca-15-500x500.jpg
-  - Acarajé - https://assets.tastemadecdn.net/images/286b17/1231874d2fa30f09baa7/cce93d.jpg
-  - Abará - https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1701525573656b38459c900_75_75.jpeg
-  - Caruru - https://canaldareceita.com.br/wp-content/uploads/2025/03/CARURU-720x720.jpg
-  - Xinxim de Galinha - https://nacolher.com/wp-content/uploads/2022/10/como-fazer-xinxim-de-galinha.jpg
-  - Feijoada - https://th-thumbnailer.cdn-si-edu.com/6yQXolz5w833JwZEsjOWR2TJjiY=/1280x1280/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/a2/af/a2af930e-aa90-412b-9ec8-b0de651d5fa7/feijoada-brazil-world-cup.jpg
-  - Pão de Queijo - https://static01.nyt.com/images/2024/12/19/multimedia/KF-Pao-de-Queijorex/KF-Pao-de-Queijorex-mediumSquareAt3X-v2.jpg
-  - Coxinha - https://www.beths.uk/cdn/shop/products/coxinha03_40cab723-f1ab-4310-9222-5356ae659e47_1445x.png?v=1719501444
-  - Pastel - https://thumbs.dreamstime.com/b/pastel-brasile%C3%B1o-de-la-comida-homemade-121303554.jpg
-  - Brigadeiro - https://bonnibakery.com/wp-content/uploads/2024/08/Brigadeiro_206-1.jpg
-  - Quindim - https://divaliciousrecipes.com/wp-content/uploads/2014/02/quindim.jpg
+### Images
+
+- **Menu:** The images were taken from the pages below
+- Bobó de Camarão - https://www.sumerbol.com.br/uploads/images/2021/06/bobo-de-camarao-1134-1624568462.jpg
+- Moqueca Baiana - https://foodandroad.com/wp-content/uploads/2021/06/img-brazil-moqueca-15-500x500.jpg
+- Acarajé - https://assets.tastemadecdn.net/images/286b17/1231874d2fa30f09baa7/cce93d.jpg
+- Abará - https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1701525573656b38459c900_75_75.jpeg
+- Caruru - https://canaldareceita.com.br/wp-content/uploads/2025/03/CARURU-720x720.jpg
+- Xinxim de Galinha - https://nacolher.com/wp-content/uploads/2022/10/como-fazer-xinxim-de-galinha.jpg
+- Feijoada - https://th-thumbnailer.cdn-si-edu.com/6yQXolz5w833JwZEsjOWR2TJjiY=/1280x1280/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/a2/af/a2af930e-aa90-412b-9ec8-b0de651d5fa7/feijoada-brazil-world-cup.jpg
+- Pão de Queijo - https://static01.nyt.com/images/2024/12/19/multimedia/KF-Pao-de-Queijorex/KF-Pao-de-Queijorex-mediumSquareAt3X-v2.jpg
+- Coxinha - https://www.beths.uk/cdn/shop/products/coxinha03_40cab723-f1ab-4310-9222-5356ae659e47_1445x.png?v=1719501444
+- Pastel - https://thumbs.dreamstime.com/b/pastel-brasile%C3%B1o-de-la-comida-homemade-121303554.jpg
+- Brigadeiro - https://bonnibakery.com/wp-content/uploads/2024/08/Brigadeiro_206-1.jpg
+- Quindim - https://divaliciousrecipes.com/wp-content/uploads/2014/02/quindim.jpg
+- **Others:** They were generated by Gemini.
 
 [Back to the top](#table-of-contents)
