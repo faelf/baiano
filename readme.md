@@ -263,8 +263,14 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 - A responsive navigation bar is present on all pages, providing consistent access to all pages.
 - **Dynamic Links:** The navigation bar dynamically adapts based on user authentication.
-  - **Authenticated Users:** See links for `My Bookings` and `Log out`.
-  - **Unauthenticated Users:** See links for `Log in` and a `Register` button.
+- **Authenticated Users:** See links for `My Bookings` and `Log out`.
+  <p align="center">
+    <img src="readme/features/nav-logged.png" alt="nav" width="600"/>
+  </p>
+- **Unauthenticated Users:** See links for `Log in` and a `Register` button.
+  <p align="center">
+    <img src="readme/features/nav.png" alt="nav" width="600"/>
+  </p>
 
 ### Homepage
 
@@ -298,6 +304,17 @@ The `My Bookings` page is designed as a user page, where customers can view and 
 - **Create:** The `New Booking` button allows users to easily make a new reservation.
 - **Update:** Clicking `Edit` enables the `Save` and `Cancel` buttons, providing an intuitive editing experience.
 - **Delete:** The `Delete` button redirects the customer to a confirmation page, where they can delete or keep their reservation.
+
+  <p align="center">
+    <img src="readme/features/crud-btns.png" alt="crud buttons" width="400"/>
+  </p>
+
+### Sucess Messages
+
+- Feedback messages when the user logs in, logs out, register, create a reservation, edits a reservation, or deletes a reservation.
+  <p align="center">
+    <img src="readme/features/success-message.png" alt="messages" width="600"/>
+  </p>
 
 ### Progressive Web App (PWA)
 
