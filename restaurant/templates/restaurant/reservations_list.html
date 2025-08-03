@@ -34,7 +34,7 @@
   {% for reservation in reservations %}
   <div class="card mb-3">
     <div class="card-body">
-      <p class="display-6 mb-3" class="card-title">Booking details</p>
+      <p class="display-6 mb-3">Booking details</p>
       <!-- action is for the save button to send the updated reservation -->
       <!-- data-delete-url for JS to redirect to the delete page -->
       <form method="post" action="{% url 'reservation_update' reservation.pk %}"
@@ -46,36 +46,38 @@
             <div class="row">
               <div class="col-12 col-md-6 col-lg-6 mb-2">
                 <label for="first_name" class="form-label">First Name</label>
-                <input type="text" name="first_name" class="form-control" value="{{ reservation.first_name }}" readonly>
+                <input id="first_name" type="text" name="first_name" class="form-control"
+                  value="{{ reservation.first_name }}" readonly>
               </div>
 
               <div class="col-12 col-md-6 col-lg-6 mb-2">
                 <label for="last_name" class="form-label">Last Name</label>
-                <input type="text" name="last_name" class="form-control" value="{{ reservation.last_name }}" readonly>
+                <input id="last_name" type="text" name="last_name" class="form-control"
+                  value="{{ reservation.last_name }}" readonly>
               </div>
 
               <div class="col-12 col-md-4 col-lg-4 mb-2">
                 <label for="date" class="form-label">Reservation Date</label>
-                <input type="date" name="date" class="form-control" value="{{ reservation.date|date:'Y-m-d' }}"
-                  readonly>
+                <input id="date" type="date" name="date" class="form-control"
+                  value="{{ reservation.date|date:'Y-m-d' }}" readonly>
               </div>
 
               <div class="col-12 col-md-4 col-lg-4 mb-2">
                 <label for="time" class="form-label">Reservation Time</label>
-                <input type="time" name="time" class="form-control" value="{{ reservation.time|time:'H:i' }}" readonly>
+                <input id="time" name="time" class="form-control" value="{{ reservation.time|time:'H:i' }}" readonly>
               </div>
 
               <div class="col-12 col-md-4 col-lg-4 mb-2">
                 <label for="guests" class="form-label">Number of Guests</label>
-                <input type="number" name="guests" class="form-control" value="{{ reservation.guests }}" min="1"
-                  readonly>
+                <input id="guests" type="number" name="guests" class="form-control" value="{{ reservation.guests }}"
+                  min="1" readonly>
               </div>
             </div>
           </div>
 
           <div class="col-12 col-lg-4">
             <label for="message" class="form-label">Message</label>
-            <textarea name="message" class="form-control" rows="4" readonly>{{ reservation.message }}</textarea>
+            <textarea id="message" class="form-control" rows="4" readonly>{{ reservation.message }}</textarea>
           </div>
         </div>
 

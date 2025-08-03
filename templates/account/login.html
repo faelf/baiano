@@ -9,38 +9,38 @@
 {% endblock page-title %}
 
 {% block content %}
-  <div class="container mb-5">
-    <div class="login-page">
-      
-      <div class="mb-5">
-        <p class="display-3">Sign In</p>
-      </div>
+<div class="container mb-5">
+  <div class="login-page">
 
-      <div class="mb-3">
-        <p>Welcome to Baiano Restaurant!</p>
-        <p>We're excited to have you here. If you already have an account, please log in below.</p>
-      </div>
-
-      <form class="login" method="POST" action="{% url 'account_login' %}">
-        {% csrf_token %}
-
-        {{ form | crispy  }}
-
-        {% if redirect_field_value %}
-          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-
-        <div class="d-flex justify-content-end">
-          <button class="btn btn-primary" type="submit" class="btn">Sign In</button>
-        </div>
-      </form>
-
-      <p class="text-muted text-center mt-3">
-        If you have not created an account yet, 
-      </p>
-      <p class="text-muted text-center">
-        then <a class="link" href="{{ signup_url }}">sign up</a> first.
-      </p>
+    <div class="mb-5">
+      <p class="display-3">Sign In</p>
     </div>
+
+    <div class="mb-3">
+      <p>Welcome to Baiano Restaurant!</p>
+      <p>We're excited to have you here. If you already have an account, please log in below.</p>
+    </div>
+
+    <form class="login" method="POST" action="{% url 'account_login' %}">
+      {% csrf_token %}
+
+      {{ form | crispy }}
+
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-primary" type="submit">Sign In</button>
+      </div>
+    </form>
+
+    <p class="text-muted text-center mt-3">
+      If you have not created an account yet,
+    </p>
+    <p class="text-muted text-center">
+      then <a class="link" href="{{ signup_url }}">sign up</a> first.
+    </p>
   </div>
+</div>
 {% endblock content %}

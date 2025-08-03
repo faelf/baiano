@@ -19,32 +19,36 @@
         <div class="row">
           <div class="col-12 col-md-6 mb-2">
             <label for="first_name" class="form-label">First Name</label>
-            <input type="text" name="first_name" class="form-control" value="{{ object.first_name }}" disabled>
+            <input id="first_name" type="text" name="first_name" class="form-control" value="{{ object.first_name }}"
+              disabled>
           </div>
 
           <div class="col-12 col-md-6 mb-2">
             <label for="last_name" class="form-label">Last Name</label>
-            <input type="text" name="last_name" class="form-control" value="{{ object.last_name }}" disabled>
+            <input id="last_name" type="text" name="last_name" class="form-control" value="{{ object.last_name }}"
+              disabled>
           </div>
 
           <div class="col-12 col-md-4 mb-2">
             <label for="date" class="form-label">Reservation Date</label>
-            <input type="date" name="date" class="form-control" value="{{ object.date|date:'d/m/Y' }}" disabled>
+            <input id="date" type="date" name="date" class="form-control" value="{{ object.date|date:'Y-m-d' }}"
+              disabled>
           </div>
 
           <div class="col-12 col-md-4 mb-2">
             <label for="time" class="form-label">Reservation Time</label>
-            <input type="time" name="time" class="form-control" value="{{ object.time|time:'H:i' }}" disabled>
+            <input id="time" type="time" name="time" class="form-control" value="{{ object.time|time:'H:i' }}" disabled>
           </div>
 
           <div class="col-12 col-md-4 mb-2">
             <label for="guests" class="form-label">Number of Guests</label>
-            <input type="number" name="guests" class="form-control" value="{{ object.guests }}" min="1" disabled>
+            <input id="guests" name="guests" type="number" class="form-control" value="{{ object.guests }}" min="1"
+              disabled>
           </div>
 
           <div class="col-12 mb-2">
             <label for="message" class="form-label">Message</label>
-            <textarea name="message" class="form-control" rows="3" disabled>{{ object.message }}</textarea>
+            <textarea id="message" class="form-control" rows="3" disabled>{{ object.message }}</textarea>
           </div>
 
         </div>
