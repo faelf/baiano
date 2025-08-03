@@ -433,6 +433,66 @@ One error, double class, and just removed `class="btn"`.
   <img src="readme/testing/no-error-message.png" alt="no errors" width="600"/>
 </p>
 
+### The W3C CSS Validation Service
+
+<p align="center">
+  <img src="readme/testing/css-no-error-message.png" alt="no errors" width="600"/>
+</p>
+
+### JSLint
+
+**First try:**
+
+<p align="center">
+  <img src="readme/testing/jslint-errors.png" alt="jslint errors" width="600"/>
+</p>
+
+1. To fix the if statement
+
+```JavaScript
+if (!editBtn) {
+      return;
+    }
+```
+
+2. To fix the 80 character
+
+```JavaScript
+const deleteUrl = card.querySelector("form").dataset.deleteUrl;
+```
+
+**Second try** After fixing the first errors, I got more errors when running again.
+
+<p align="center">
+  <img src="readme/testing/jslint-errors-2.png" alt="jslint errors" width="600"/>
+</p>
+
+This was how I fixed it, and because I got an error for the readonly false, I fixed for the true as well.
+
+```JavaScript
+inputs.forEach(function (i) {
+        i.readOnly = false;
+      });
+```
+
+**Third try** And then running again, I got another error.
+
+<p align="center">
+  <img src="readme/testing/jslint-errors-3.png" alt="jslint errors" width="600"/>
+</p>
+
+This is how I fixed it.
+
+```JavaScript
+window.alert("Delete URL not configured.");
+```
+
+**Fourth try:** Finally no errors.
+
+<p align="center">
+  <img src="readme/testing/js-no-warnings.png" alt="jslint no errors" width="600"/>
+</p>
+
 [Back to the top](#table-of-contents)
 
 ## Bugs
