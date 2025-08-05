@@ -330,6 +330,14 @@ The `My Bookings` page is designed as a user page, where customers can view and 
 
 ## Future Features
 
+These are on the GitHub Project in the To Do.
+
+- **Menu:** Admin can edit the menu, adding and removing items.
+- **Contact Form:** A contact form that possible customers can ask questions.
+- **Map:** Embedded Google Maps.
+- **Customer Reviews:** A form where customers can leave reviews. And admins can display them on the page.
+- **Front-end Admin Page:** An admin page on the webpage where the admin can edit reservations.
+
 [Back to the top](#table-of-contents)
 
 ## Testing
