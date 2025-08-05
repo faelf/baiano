@@ -13,8 +13,8 @@
   <div class="container text-center">
     <h1 class="display-4 fw-bold mb-3">Welcome to Baiano Restaurant</h1>
     <p class="lead mb-4">Experience the authentic flavours of Bahia, right here in London.</p>
-    <a href="{% url 'menu' %}" class="btn btn-primary btn-lg p-3 me-3">Explore Menu</a>
-    <a href="{% url 'reservations' %}" class="btn btn-secondary p-3 btn-lg">Book a Table</a>
+    <a href="{% url 'menu' %}" class="btn btn-primary btn-lg p-3 me-3 mb-3">Explore Menu</a>
+    <a href="{% url 'reservations' %}" class="btn btn-secondary btn-lg p-3 me-3 mb-3">Book a Table</a>
   </div>
 </div>
 
@@ -28,19 +28,19 @@
   <div class="row text-center justify-content-around">
     <div class="col-12 col-md-4 feat-dishes">
       <img src="{% static 'images/pastel.png' %}" alt="Pastel">
-      <h5 class="fw-bold">Pastel</h5>
+      <p class="fs-5 fw-bold">Pastel</p>
       <p class="text-muted small">Crispy pastry filled with savoury delights, a Brazilian favourite.</p>
     </div>
 
     <div class="col-12 col-md-4 feat-dishes">
       <img src="{% static 'images/acaraje.jpg' %}" alt="Acaraje">
-      <h5 class="fw-bold">Moqueca Baiana</h5>
+      <p class="fs-5 fw-bold">Acarajé</p>
       <p class="text-muted small">Deep-fried black-eyed pea fritters, crispy outside, soft inside.</p>
     </div>
 
     <div class="col-12 col-md-4 feat-dishes">
       <img src="{% static 'images/caruru.jpg' %}" alt="Caruru">
-      <h5 class="fw-bold">Caruru</h5>
+      <p class="fs-5 fw-bold">Caruru</p>
       <p class="text-muted small">Okra stew with shrimp, peanuts, and palm oil, rich Bahian flavours.</p>
     </div>
   </div>
@@ -52,36 +52,29 @@
       <p class="display-3">Customer Reviews</p>
     </div>
 
-    <div class="row text-center justify-content-around">
+    <div class="row justify-content-around">
       <div class="col-12 col-md-4">
-        <figure>
-          <blockquote class="blockquote">
-            <p>“The flavours took me straight back to Bahia! The moqueca was divine, fresh, rich, and perfectly spiced.I
-              will definitely be back.”</p>
-          </blockquote>
-          <figcaption class="blockquote-footer">Ana M.</figcaption>
-        </figure>
+        <p class="text-center fs-5">“The flavours took me straight back to Bahia! The moqueca was divine, fresh, rich,
+          and perfectly
+          spiced.I
+          will definitely be back.”</p>
+        <p class="text-end">- Ana M.</p>
       </div>
 
       <div class="col-12 col-md-4">
-        <figure>
-          <blockquote class="blockquote">
-            <p>“Amazing food and friendly service. The acarajé was crispy and authentic, just like home. Highly
-              recommend!”</p>
-          </blockquote>
-          <figcaption class="blockquote-footer">Lucas T.</figcaption>
-        </figure>
+        <p class="text-center fs-5">“Amazing food and friendly service. The acarajé was crispy and authentic, just like
+          home. Highly
+          recommend!”
+        </p>
+        <p class="text-end">- Lucas T.</p>
       </div>
 
       <div class="col-12 col-md-4">
-        <figure>
-          <blockquote class="blockquote">
-            <p>“A hidden gem in London! The atmosphere is cosy and the staff made us feel like family. Can not wait to
-              try
-              the caruru next time.”</p>
-          </blockquote>
-          <figcaption class="blockquote-footer">Sofia R.</figcaption>
-        </figure>
+        <p class="text-center fs-5">“A hidden gem in London! The atmosphere is cosy and the staff made us feel like
+          family. Can not
+          wait to try
+          the caruru next time.”</p>
+        <p class="text-end">- Sofia R.</p>
       </div>
     </div>
   </div>

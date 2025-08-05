@@ -205,6 +205,10 @@ nav {
   background-color: hsl(37, 100%, 93%); /* #fff4e6 */
 }
 
+figcaption {
+  color: black;
+}
+
 /* Log In Page */
 
 .login-page {
