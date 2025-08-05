@@ -70,27 +70,28 @@
 
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Home</a>
+            <a class="nav-link {% if request.path == home_url %}cs-active{% endif %}" href="{{ home_url }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if request.path == menu_url %}active{% endif %}" href="{{ menu_url }}">Menu</a>
+            <a class="nav-link {% if request.path == menu_url %}cs-active{% endif %}" href="{{ menu_url }}">Menu</a>
           </li>
         </ul>
 
         <ul class="navbar-nav ms-md-auto">
           {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link {% if request.path == reservations_url %}active{% endif %}"
+            <a class="nav-link {% if request.path == reservations_url %}cs-active{% endif %}"
               href="{{ reservations_url }}">My Bookings</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
+            <a class="nav-link {% if request.path == logout_url %}cs-active{% endif %}"
               href="{% url 'account_logout' %}">Log out</a>
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{% url 'account_login' %}">Log
+            <a class="nav-link {% if request.path == login_url %}cs-active{% endif %}"
+              href="{% url 'account_login' %}">Log
               in</a>
           </li>
 

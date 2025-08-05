@@ -493,6 +493,38 @@ window.alert("Delete URL not configured.");
   <img src="readme/testing/js-no-warnings.png" alt="jslint no errors" width="600"/>
 </p>
 
+### PageSpeed
+
+**Home Page**
+
+- **Mobile:**
+<p align="center">
+  <img src="readme/testing/pagespeed-home-page-mobile-errors.png" alt="pagespeed home page mobile errors" width="600"/>
+</p>
+
+- **Desktop:**
+<p align="center">
+  <img src="readme/testing/pagespeed-home-page-desktop-errors.png" alt="pagespeed home page desktop errors" width="600"/>
+</p>
+
+**Menu Page**
+
+- **Mobile:**
+<p align="center">
+  <img src="readme/testing/pagespeed-menu-page-mobile-errors.png" alt="pagespeed menu page mobile errors" width="600"/>
+</p>
+
+- **Desktop:**
+<p align="center">
+  <img src="readme/testing/pagespeed-menu-page-desktop-errors.png" alt="pagespeed menu page desktop errors" width="600"/>
+</p>
+
+For the errors below, I changed the secondary button text colour to black, and the navigation buttons, but decided to keep the social media buttons text white, as it looks better than with a black text, but removed the hover effect.
+
+<p align="center">
+  <img src="readme/testing/pagespeed-menu-page-desktop-accessibility-errors.png" alt="pagespeed menu page accessibility errors" width="600"/>
+</p>
+
 [Back to the top](#table-of-contents)
 
 ## Bugs

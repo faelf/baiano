@@ -71,6 +71,7 @@ a {
   background-color: var(--colour-primary);
   border-color: var(--colour-primary);
   font-family: var(--font-body);
+  color: var(--colour-light);
   border-radius: 70px;
   font-weight: bold;
 }
@@ -84,6 +85,7 @@ a {
   background-color: var(--colour-secondary);
   border-color: var(--colour-secondary);
   font-family: var(--font-body);
+  color: var(--colour-dark);
   border-radius: 70px;
   font-weight: bold;
 }
@@ -146,8 +148,12 @@ nav {
   font-size: 1.2rem;
 }
 
-.active {
-  color: var(--colour-dark);
+.nav-link:hover {
+  color: var(--colour-secondary);
+}
+
+.cs-active {
+  color: var(--colour-secondary);
 }
 
 /* Menu Styles */
@@ -261,7 +267,7 @@ footer {
   font-weight: 600;
   padding: 0.5rem 1rem;
   border-radius: 60px;
-  color: var(--color-light);
+  color: var(--colour-light);
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
@@ -271,25 +277,19 @@ footer {
 }
 
 /* Facebook */
-.btn-facebook {
-  background-color: var(--color-facebook);
-}
+.btn-facebook,
 .btn-facebook:hover {
-  background-color: hsl(221, 80%, 40%);
+  background-color: var(--color-facebook);
 }
 
 /* YouTube */
-.btn-youtube {
-  background-color: var(--color-youtube);
-}
+.btn-youtube,
 .btn-youtube:hover {
-  background-color: hsl(0, 100%, 60%);
+  background-color: var(--color-youtube);
 }
 
 /* Instagram */
-.btn-instagram {
-  background-color: var(--color-instagram);
-}
+.btn-instagram,
 .btn-instagram:hover {
-  background-color: hsl(180, 100%, 40%);
+  background-color: var(--color-instagram);
 }
