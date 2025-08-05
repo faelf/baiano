@@ -559,6 +559,8 @@ The only error I got was that some lines were longer than 80 characters, and the
 
 ## Bugs
 
+There is no known bugs yet.
+
 [Back to the top](#table-of-contents)
 
 ## Credits
