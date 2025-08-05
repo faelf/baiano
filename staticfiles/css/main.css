@@ -137,6 +137,16 @@ a {
   color: var(--colour-secondary);
 }
 
+.navbar-toggler,
+.navbar-toggler:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.navbar-toggler i {
+  color: var(--colour-light);
+}
+
 nav {
   background-color: var(--colour-primary);
 }
