@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+
 class Reservations(models.Model):
     # ForeignKey - username from User
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -25,4 +26,5 @@ class Reservations(models.Model):
 
     # To show the reservation on the admin
     def __str__(self):
-        return f"{self.first_name} {self.last_name} - {self.date} at {self.time}"
+        return f"{self.first_name} {self.last_name}-{self.date} at {self.time}"
+

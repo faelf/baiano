@@ -525,6 +525,26 @@ For the errors below, I changed the secondary button text colour to black, and t
   <img src="readme/testing/pagespeed-menu-page-desktop-accessibility-errors.png" alt="pagespeed menu page accessibility errors" width="600"/>
 </p>
 
+### CI Python Linter
+
+The only error I got was that some lines were longer than 80 characters, and they were easy to fix.
+
+<p align="center">
+  <img src="readme/testing/django-forms.png" alt="forms.py" width="600"/>
+</p>
+
+<p align="center">
+  <img src="readme/testing/django-model.png" alt="forms.py" width="600"/>
+</p>
+
+<p align="center">
+  <img src="readme/testing/django-urls.png" alt="urls.py" width="600"/>
+</p>
+
+<p align="center">
+  <img src="readme/testing/django-views.png" alt="views.py" width="600"/>
+</p>
+
 [Back to the top](#table-of-contents)
 
 ## Bugs

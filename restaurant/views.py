@@ -31,7 +31,9 @@ class ReservationsList(LoginRequiredMixin, generic.ListView):
         )
 
 
-class ReservationCreateView(SuccessMessageMixin, LoginRequiredMixin, CreateView):
+class ReservationCreateView(SuccessMessageMixin,
+                            LoginRequiredMixin,
+                            CreateView):
     """
     View to create a new reservation.
 
@@ -52,7 +54,9 @@ class ReservationCreateView(SuccessMessageMixin, LoginRequiredMixin, CreateView)
         return super().form_valid(form)
 
 
-class ReservationUpdateView(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
+class ReservationUpdateView(SuccessMessageMixin,
+                            LoginRequiredMixin,
+                            UpdateView):
     """
     View to edit a reservation.
 
@@ -72,7 +76,9 @@ class ReservationUpdateView(SuccessMessageMixin, LoginRequiredMixin, UpdateView)
         return Reservations.objects.filter(user=self.request.user)
 
 
-class ReservationDeleteView(SuccessMessageMixin, LoginRequiredMixin, DeleteView):
+class ReservationDeleteView(SuccessMessageMixin,
+                            LoginRequiredMixin,
+                            DeleteView):
     """
     View to delete a reservation.
 
