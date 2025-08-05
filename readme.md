@@ -1,5 +1,7 @@
 # Baiano Restaurant
 
+![screenshot](/readme/page-screenshot.png)
+
 ## Table of Contents
 
 - [Overview](#overview)
