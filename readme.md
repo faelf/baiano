@@ -105,6 +105,18 @@ Images are set with `max-width` to ensure that they stay responsive, and they wi
 
 ## Skeleton (Wireframes)
 
+### Mobile
+
+![Mobile](/readme/wireframes/mobile.png)
+
+### Tablet
+
+![Tablet](/readme/wireframes/tablet.png)
+
+### Desktop
+
+![Desktop](/readme/wireframes/desktop.png)
+
 [Back to the top](#table-of-contents)
 
 ## Surface (Visual Design)
