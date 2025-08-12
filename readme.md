@@ -582,6 +582,34 @@ For the errors below, I changed the secondary button text colour to black, and t
   <img src="readme/testing/pagespeed-menu-page-desktop-accessibility-errors.png" alt="pagespeed menu page accessibility errors" width="600"/>
 </p>
 
+**Final Results**
+
+- **Home Page Mobile:**
+
+<p align="center">
+  <img src="readme/testing/pagespeed-final-homepage-mobile.png" alt="pagespeed homepage mobile results" width="600"/>
+</p>
+
+- **Home Page Desktop:**
+
+<p align="center">
+  <img src="readme/testing/pagespeed-final-homepage-desktop.png" alt="pagespeed homepage desktop results" width="600"/>
+</p>
+
+- **Menu Page Mobile:**
+
+<p align="center">
+  <img src="readme/testing/pagespeed-final-menu-mobile.png" alt="pagespeed menu mobile results" width="600"/>
+</p>
+
+- **Menu Page Desktop:**
+
+<p align="center">
+  <img src="readme/testing/pagespeed-final-menu-desktop.png" alt="pagespeed Menu desktop results" width="600"/>
+</p>
+
+- I decided to keep the white font colour even though accessibility is not 100, this was intentional to maintain visual consistency.
+
 ### CI Python Linter
 
 The only error I got was that some lines were longer than 80 characters, and they were easy to fix.
