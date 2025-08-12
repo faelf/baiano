@@ -277,13 +277,16 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 - A responsive navigation bar is present on all pages, providing consistent access to all pages.
 - **Dynamic Links:** The navigation bar dynamically adapts based on user authentication.
-- **Authenticated Users:** See links for `My Bookings` and `Log out`.
+  - **Authenticated Users:** See links for `My Bookings` and `Log out`.
+
   <p align="center">
-    <img src="readme/features/nav-logged.png" alt="nav" width="600"/>
+    <img src="readme/features/nav-bar-log.png" alt="Navbar" width="600"/>
   </p>
-- **Unauthenticated Users:** See links for `Log in` and a `Register` button.
+
+  - **Unauthenticated Users:** See links for `Log in` and a `Register` button.
+
   <p align="center">
-    <img src="readme/features/nav.png" alt="nav" width="600"/>
+    <img src="readme/features/nav-bar-unlog.png" alt="Navbar" width="600"/>
   </p>
 
 ### Homepage
@@ -291,9 +294,28 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 The homepage introduces the restaurant, and at the same time being functional.
 
 - **Hero Section:** A full-width hero image with a welcoming message and large buttons for the customer to easily book a table or register in the restaurant.
+
+<p align="center">
+  <img src="readme/features/homepage-hero.png" alt="Hero" width="600"/>
+</p>
+
 - **Popular Choices:** This section displays featured dishes with images and brief descriptions, giving users a quick taste of the menu.
+
+<p align="center">
+  <img src="readme/features/homepage-feat-dishes.png" alt="Feature Dishes" width="600"/>
+</p>
+
 - **Customer Reviews:** To create a connection between customers and the restaurant.
+
+<p align="center">
+  <img src="readme/features/homepage-reviews.png" alt="Reviews" width="600"/>
+</p>
+
 - **About Us:** This final section tells the story of the restaurant.
+
+<p align="center">
+  <img src="readme/features/homepage-about.png" alt="About" width="600"/>
+</p>
 
 ### Footer
 
@@ -302,13 +324,25 @@ The homepage introduces the restaurant, and at the same time being functional.
 - **Location:** Address of the restaurant.
 - **Opening Hours:** Hours of operation.
 
+<p align="center">
+  <img src="readme/features/footer.png" alt="Footer" width="600"/>
+</p>
+
 ### Menu
 
 A menu page with pictures of the dishes to attract customers.
 
+<p align="center">
+  <img src="readme/features/menu-page.png" alt="Menu Page" width="600"/>
+</p>
+
 ### Login & Registration
 
 These features provide the main functionality, and enable a personalised experience for each user by allowing them to manage their bookings and access user-specific content.
+
+<p align="center">
+  <img src="readme/features/sign-up-page.png" alt="Sign up Page" width="600"/>
+</p>
 
 ### Reservations
 
@@ -319,16 +353,17 @@ The `My Bookings` page is designed as a user page, where customers can view and 
 - **Update:** Clicking `Edit` enables the `Save` and `Cancel` buttons, providing an intuitive editing experience.
 - **Delete:** The `Delete` button redirects the customer to a confirmation page, where they can delete or keep their reservation.
 
-  <p align="center">
-    <img src="readme/features/crud-btns.png" alt="crud buttons" width="400"/>
-  </p>
+<p align="center">
+  <img src="readme/features/crud-btns.png" alt="crud buttons" width="400"/>
+</p>
 
 ### Sucess Messages
 
 - Feedback messages when the user logs in, logs out, register, create a reservation, edits a reservation, or deletes a reservation.
-  <p align="center">
-    <img src="readme/features/success-message.png" alt="messages" width="600"/>
-  </p>
+
+<p align="center">
+  <img src="readme/features/success-message.png" alt="messages" width="600"/>
+</p>
 
 ### Progressive Web App (PWA)
 
