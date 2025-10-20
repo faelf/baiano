@@ -275,16 +275,25 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 ### Navigation
 
-- A responsive navigation bar is present on all pages, providing consistent access to all pages.
+- A responsive navigation bar is present on all pages, providing consistent access to all pages. On small screens the navigation menu is accessible by a burger icon.
+
+  <p align="center">
+    <img src="readme/features/mobile_nav_closed.png" alt="Navbar" width="600"/>
+  </p>
+
+  <p align="center">
+    <img src="readme/features/mobile_nav_open.png" alt="Navbar" width="600"/>
+  </p>
+  
 - **Dynamic Links:** The navigation bar dynamically adapts based on user authentication.
 
-  - **Authenticated Users:** See links for `My Bookings` and `Log out`.
+- **Authenticated Users:** See links for `My Bookings` and `Log out`.
 
   <p align="center">
     <img src="readme/features/nav-bar-log.png" alt="Navbar" width="600"/>
   </p>
 
-  - **Unauthenticated Users:** See links for `Log in` and a `Register` button.
+- **Unauthenticated Users:** See links for `Log in` and a `Register` button.
 
   <p align="center">
     <img src="readme/features/nav-bar-unlog.png" alt="Navbar" width="600"/>
@@ -634,7 +643,7 @@ The only error I got was that some lines were longer than 80 characters, and the
 ### Manual Testing
 
 | Feature                       | Action                                   | Expected Result                                                                             | Tested | Passed | Comments                                                                         |
-|-------------------------------|------------------------------------------|---------------------------------------------------------------------------------------------|--------|--------|----------------------------------------------------------------------------------|
+| ----------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------- | ------ | ------ | -------------------------------------------------------------------------------- |
 | Navigation Bar                | Open logo link                           | Opens the home page.                                                                        | Yes    | Yes    | Opened the expected page.                                                        |
 | Navigation Bar                | Open home link                           | Opens the home page.                                                                        | Yes    | Yes    | Opened the expected page.                                                        |
 | Navigation Bar                | Open menu link                           | Opens the menu page.                                                                        | Yes    | Yes    | Opened the expected page.                                                        |
