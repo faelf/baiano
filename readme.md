@@ -277,6 +277,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 - A responsive navigation bar is present on all pages, providing consistent access to all pages.
 - **Dynamic Links:** The navigation bar dynamically adapts based on user authentication.
+
   - **Authenticated Users:** See links for `My Bookings` and `Log out`.
 
   <p align="center">
@@ -629,6 +630,40 @@ The only error I got was that some lines were longer than 80 characters, and the
 <p align="center">
   <img src="readme/testing/django-views.png" alt="views.py" width="600"/>
 </p>
+
+### Manual Testing
+
+| Feature                       | Action                                   | Expected Result                                                                             | Tested | Passed | Comments                                                                         |
+|-------------------------------|------------------------------------------|---------------------------------------------------------------------------------------------|--------|--------|----------------------------------------------------------------------------------|
+| Navigation Bar                | Open logo link                           | Opens the home page.                                                                        | Yes    | Yes    | Opened the expected page.                                                        |
+| Navigation Bar                | Open home link                           | Opens the home page.                                                                        | Yes    | Yes    | Opened the expected page.                                                        |
+| Navigation Bar                | Open menu link                           | Opens the menu page.                                                                        | Yes    | Yes    | Opened the expected page.                                                        |
+| Navigation Bar                | Open login link                          | Opens the login page.                                                                       | Yes    | Yes    | Opened the expected page.                                                        |
+| Navigation Bar                | Open register link                       | Opens the register page.                                                                    | Yes    | Yes    | Opened the expected page.                                                        |
+| Navigation Bar                | Open my bookings link                    | Opens the my bookings page.                                                                 | Yes    | Yes    | Opened the expected page.                                                        |
+| Navigation Bar                | Open log out link                        | Opens the logout page.                                                                      | Yes    | Yes    | Opened the expected page.                                                        |
+| Hero call-to-action button    | Click Explore Menu button                | Opens the menu page.                                                                        | Yes    | Yes    | Opened the expected page.                                                        |
+| Hero call-to-action button    | Click Book a Table button                | Opens the login page for not logged in users, and the My Bookings page for logged in users. | Yes    | Yes    | Opened the expected pages.                                                       |
+| Footer Facebook button        | Click Facebook button                    | Opens Facebook page.                                                                        | Yes    | Yes    | Opened the expected page.                                                        |
+| Footer Youtube button         | Click Youtube button                     | Opens Youtube page.                                                                         | Yes    | Yes    | Opened the expected page.                                                        |
+| Footer Instagram button       | Click Instagram button                   | Opens Instagram page.                                                                       | Yes    | Yes    | Opened the expected page.                                                        |
+| New Booking Form              | Test input fields validation             | Shows message to fill in the missing inputs.                                                | Yes    | Yes    | It shows a message when the field is not filled.                                 |
+| New Booking Form              | Create a new booking                     | Show the new booking in the My Bookings page                                                | Yes    | Yes    | New booking was added to the data base and displayed in my bookings page.        |
+| New Booking Form              | New booking success message              | Show success message.                                                                       | Yes    | Yes    | Success message displayed.                                                       |
+| Booking Details Delete Button | Delete a booking                         | Take to the Delete Booking Confirmation Page.                                               | Yes    | Yes    | Goes to the Delete Booking Confirmation Page.                                    |
+| Booking Details Delete Button | Delete a booking                         | Delete existing booking from confirmation page.                                             | Yes    | Yes    | Booking was deleted from the data base, no longer displayed in my bookings page. |
+| Booking Details Delete Button | Delete a booking success message         | Show successful message.                                                                    | Yes    | Yes    | Success message displayed.                                                       |
+| Booking Details Edit Button   | Edit a booking                           | Clicking on the edit button allows the user to update information on the booking.           | Yes    | Yes    | The fields become editable.                                                      |
+| Booking Details Edit Button   | Save changes to a booking                | Clicking on the save button saves the changes and display a message to the user.            | Yes    | Yes    | Booking was updated on the data base, and success message displayed.             |
+| Booking Details Edit Button   | Save changes to a booking sucess message | Show successful message.                                                                    | Yes    | Yes    | Success message displayed.                                                       |
+| Booking Details Cancel Button | Keep the booking.                        | Save button to disapear, and fields are no longer editable.                                 | Yes    | Yes    | The buttons behave as expected.                                                  |
+| Registration Form             | Create a new account                     | Show message if input field is left blank.                                                  | Yes    | Yes    | Messages are shown for the required fields.                                      |
+| Registration Form             | Create a new account                     | New account is created                                                                      | Yes    | Yes    | New account was added to the data base.                                          |
+| Registration Form             | Create a new account                     | Redirect to the My Bookings Page                                                            | Yes    | Yes    | User is redirected to the My Bookings page.                                      |
+| Registration Form             | Create a new account                     | Show successful message.                                                                    | Yes    | Yes    | Success message displayed.                                                       |
+| Login Form                    | Login to an existing account             | Username and password validation.                                                           | Yes    | Yes    | Username and passwords are verified.                                             |
+| Login Form                    | Login to an existing account             | Redirect to the My Bookings Page.                                                           | Yes    | Yes    | Redirected to the My Bookings Page.                                              |
+| Login Form                    | Login to an existing account             | Show successful message.                                                                    | Yes    | Yes    | Success message displayed.                                                       |
 
 [Back to the top](#table-of-contents)
 
